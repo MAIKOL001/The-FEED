@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon" type="image/png">
+   
+    <!-- Basic Page Needs
+        ================================================== -->
+    <title>The Feed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Feed  - Students PDF libary and videos">
+
+    <!-- icons
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/icons.css">
+
+    <!-- CSS 
+    ================================================== --> 
+    <link rel="stylesheet" href="assets/css/uikit.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+     <link href="assets/css/tailwind.css" rel="stylesheet"> 
+ 
+</head> 

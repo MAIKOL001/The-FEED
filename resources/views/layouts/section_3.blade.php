@@ -1,0 +1,148 @@
+<div class="my-4 flex items-center justify-between border-b pb-3">
+    <div>
+        <h2 class="text-2xl font-semibold"> 3RD YEAR
+        </h2>
+    </div>
+    <a href="#" class="text-blue-500">17<span> units</span></a>
+</div> 
+
+<div class="relative" uk-slider="finite: true">
+
+    <div class="uk-slider-container px-1 py-3">
+        <ul class="uk-slider-items uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/12.jpg" alt="">
+                            <span class="absolute bg-white px-2 py-1 text-sm rounded-md m-2"> Label</span>
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $22.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Shoes</div>
+                            <div class="ext-lg font-medium mt-1 t truncate"> Hermes Rivera </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/15.jpg" alt="">
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $12.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Herbel</div>
+                            <div class="ext-lg font-medium mt-1 t truncate"> Herbal Shampoo </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/4.jpg" alt="">
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $122.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Mobiles</div>
+                            <div class="ext-lg font-medium mt-1 t truncate"> iPhone 7 unboxing </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/14.jpg" alt="">
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $32.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Furniture</div>
+                            <div class="ext-lg font-medium mt-1 t truncate"> Wood Chair </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/9.jpg" alt="">
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $32.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Fruit</div>
+                            <div class="ext-lg font-medium mt-1 t truncate"> Strawberries FreshRipe </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="product-single.html">
+                    <div class="card">
+                        <div class="card-media h-40">
+                            <div class="card-media-overly"></div>
+                            <img src="assets/images/product/2.jpg" alt="">
+                            <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
+                                <i class="icon-feather-heart"> </i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div
+                                class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
+                                $32.99
+                            </div>
+                            <div class="text-xs font-semibold uppercase text-yellow-500">Accessories</div>
+                            <div class="ext-lg font-medium mt-1 t truncate">Wireless headphones</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+            href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+        <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+            href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+
+    </div>
+</div>
