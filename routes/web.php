@@ -22,12 +22,16 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
+
+    
+    
 });
 
 
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -42,3 +46,4 @@ Route::get('/3rdyear',[App\Http\Controllers\CoursesController::class, 'third']);
 Route::get('/4thyear',[App\Http\Controllers\CoursesController::class, 'fourth']);
 
 Route::post('/store',[App\Http\Controllers\HomeController::class, 'store'])->name('upload.file');
+

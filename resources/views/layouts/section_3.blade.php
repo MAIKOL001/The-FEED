@@ -1,6 +1,6 @@
 <div class="my-4 flex items-center justify-between border-b pb-3">
     <div>
-        <h2 class="text-2xl font-semibold"> 3RD YEAR
+        <h2 class="text-xl font-semibold"> 3RD YEAR
         </h2>
     </div>
     <a href="#" class="text-blue-500">17<span> units</span></a>

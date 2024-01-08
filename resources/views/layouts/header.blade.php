@@ -93,8 +93,8 @@
                                 <img src="assets/images/avatars/avatar-2.jpg" alt="">
                             </div>
                             <div class="user_name">
-                                <div> Stella Johnson </div>
-                                <span> @johnson</span>
+                                <div> {{Auth::user()->email}} </div>
+                                <span> {{Auth::user()->name}}</span>
                             </div>
                         </a>
                         <hr>

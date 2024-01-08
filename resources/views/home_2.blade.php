@@ -19,7 +19,9 @@
 
                 
                     <div class="flex justify-between lg:border-t border-gray-100 flex-col-reverse lg:flex-row pt-2">
-                        <nav class="responsive-nav pl-3">
+                        
+                        <nav class="responsive-nav pl--3">
+                            <h1 class="text-xl font-semibold uppercase text-blue-500">Welcome {{ Auth::user()->name }} !!</h1>
                             <ul  uk-switcher="connect: #timeline-tab; animation: uk-animation-fade">
                                
                                 <li><a href="#">Semester One </a></li>
@@ -36,11 +38,7 @@
 
                         <!-- First semester  -->
                        <div class="uk-switcher lg:mt-8 mt-4" id="timeline-tab">
-                    <div class="card md:p-6 p-2 max-w-3xl mx-auto">
-
-                        <h2 class="text-xl font-bold"> First Semesters</h2>
- 
-                       
+                    <div class="card md:p-6 p-2 max-w-6xl mx-auto">   
                         <div class="flex justify-between relative md:mb-4 mb-3">
                             <div class="flex-1">
                                 
@@ -61,7 +59,7 @@
                     </div>
 
                     <!-- Second Semester -->
-                    <div class="card md:p-6 p-2 max-w-3xl mx-auto">
+                    <div class="card md:p-6 p-2 max-w-6xl mx-auto">
 
                         <h2 class="text-xl font-bold"> Second Semester</h2>
  

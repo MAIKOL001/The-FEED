@@ -1,7 +1,7 @@
 
 <div class="flex justify-between items-center relative md:mb-4 mb-3">
     <div class="flex-1">
-        <h2 class="text-2xl font-semibold"> 1ST YEAR </h2>
+        <h2 class="text-xl font-semibold"> 1ST YEAR </h2>
     
     </div>
     <a href="#" class="text-blue-500">17<span> units</span></a>
@@ -27,7 +27,7 @@
                                 class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
                                 $24.99
                             </div>
-                            <div class="text-xl font-semibold uppercase text-yellow-500">INF 310</div>
+                            <div class="text-xs font-semibold uppercase text-red-500">INF 310</div>
                             <div class="ext-lg font-medium mt-1 t truncate"> DATA STRUCTURES AND ALOGARITHMS II </div>
                         </div>
                     </div>

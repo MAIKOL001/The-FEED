@@ -10,30 +10,30 @@
                     <th>File Location</th>
                 </thead>
                 <tbody>
-                    @if(count($files) > 0)
-                        @foreach($files as $file)
-                            <tr>
-                                <td><img src='storage/{{$file->name}}' name="{{$file->name}}" style="width:90px;height:90px;"></td>
-                                <td>{{ $file->name }}</td>
-                                <td> 
-                                    @if($file->size < 1000)
-                                        {{ number_format($file->size,2) }} bytes
-                                    @elseif($file->size >= 1000000)
-                                        {{ number_format($file->size/1000000,2) }} mb
-                                    @else
-                                        {{ number_format($file->size/1000,2) }} kb
-                                    @endif
-                                </td>
-                                <td>{{ date('M d, Y h:i A', strtotime($file->created_at)) }}</td>
-                                <td><a href="{{ $file->location }}">{{ $file->location }}</a></td>
-
-                            </tr>
-                        @endforeach
-                    @else
+                    @if($files !== null && count($files) > 0)
+                    @foreach($files as $file)
                         <tr>
-                            <td colspan="5" class="text-center">No Table Data</td>
+                            <td><img src='storage/{{$file->name}}' name="{{$file->name}}" style="width:90px;height:90px;"></td>
+                            <td>{{ $file->name }}</td>
+                            <td> 
+                                @if($file->size < 1000)
+                                    {{ number_format($file->size,2) }} bytes
+                                @elseif($file->size >= 1000000)
+                                    {{ number_format($file->size/1000000,2) }} mb
+                                @else
+                                    {{ number_format($file->size/1000,2) }} kb
+                                @endif
+                            </td>
+                            <td>{{ date('M d, Y h:i A', strtotime($file->created_at)) }}</td>
+                            <td><a href="{{ $file->location }}">{{ $file->location }}</a></td>
                         </tr>
-                    @endif
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="5" class="text-center">No Table Data</td>
+                    </tr>
+                @endif
+                
                 </tbody>
             </table>
     </div>                

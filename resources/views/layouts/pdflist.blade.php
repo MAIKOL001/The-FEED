@@ -10,10 +10,20 @@
 </div>
 
 <script>
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    if (csrfTokenElement !== null) {
+    const csrfToken = csrfTokenElement.getAttribute('content');
     // Make AJAX request to retrieve PDF data
-    fetch('/api/pdfs')
-        .then(response => response.json())
-        .then(data => {
+    fetch('/api/pdfs-for-user', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${csrfToken}`,
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': csrfToken,
+    },
+})
+    .then(response => response.json())
+    .then(data => {
             const pdfList = document.getElementById('pdfList');
             data.forEach(pdf => {
                 const pdfItem = document.createElement('div');
@@ -80,4 +90,7 @@
         .catch(error => {
             console.error(error);
         });
+    } else {
+    console.error('CSRF token element not found');
+}
 </script>
