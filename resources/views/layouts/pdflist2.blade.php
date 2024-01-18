@@ -60,8 +60,27 @@
                 downloadButton.classList.add('bg-blue-100', 'w-full', 'flex', 'font-semibold', 'h-8', 'items-center', 'justify-center', 'mt-3', 'px-3', 'rounded-md', 'text-blue-600', 'text-sm', 'mb-1');
                 downloadButton.textContent = 'Download';
 
+                // Event listener for download button
+                downloadButton.addEventListener('click', () => {
+                    // Replace 'your-pdf-path' with the actual relative path to the PDF within the public directory
+                    const pdfRelativePath = '/storage/app/public'; // You need to replace this with the correct path
+
+                    // Create a hidden link element
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = window.location.origin + '/storage/' + pdfRelativePath;
+                    downloadLink.target = '_blank'; // Open in a new tab/window
+                    downloadLink.download = pdf.name; // Set the filename for the downloaded file
+
+                    // Append the link to the body and trigger a click event to start the download
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+
+                    // Remove the link from the body after the download is initiated
+                    document.body.removeChild(downloadLink);
+                });
+
                 const deleteButton = document.createElement('button');
-                deleteButton.classList.add('bg-red-100', 'w-full', 'flex', 'font-semibold', 'h-8', 'items-center', 'justify-center', 'mt-3', 'px-3', 'rounded-md', 'text-blue-600', 'text-sm', 'mb-1');
+                deleteButton.classList.add('bg-red-100', 'w-full', 'font-semibold', 'h-8','w-5', 'items-center', 'justify-center', 'mt-3', 'px-3', 'rounded-md', 'text-blue-600', 'text-sm', 'mb-1');
                 deleteButton.textContent = 'Delete';
 
                 pdfButtons.appendChild(downloadButton);

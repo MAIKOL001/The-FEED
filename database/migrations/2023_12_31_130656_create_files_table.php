@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('location');
             $table->integer('semester')->nullable(); // Add this line to include the semester
             $table->string('category');
+            $table->string('year');
             $table->string('unit_code');
             $table->timestamps();
         });

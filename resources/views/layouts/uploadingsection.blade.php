@@ -20,7 +20,11 @@
         <div class="grid grid-cols-1 gap-3 lg:p-6 p-4">
             <form method="POST" action="{{ route('upload.file') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
-
+                @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div>
                 <label for="course_id">Course ID(Automated)</label>
                 <input type="text" name="course_id" placeholder="Course_id" value="{{ auth()->user()->course_id }}" readonly readonly style="border: 1px solid #ccc; padding: 8px;"><br><br>
@@ -48,6 +52,11 @@
                 <input type="text" name="unit_code" placeholder="Unit Code"  required style="border: 1px solid #ccc; padding: 8px;"><br><br>                      
             </div>
 
+            <div class="col-span-2">
+                <label for="Year">Year</label>
+                <input type="text" name="year" placeholder="Year"  required style="border: 1px solid #ccc; padding: 8px;"><br><br>                      
+            </div>
+
              <div class="col-span-2">
                 <div uk-form-custom class="w-full py-3">
                     <div class="bg-gray-100 border-2 border-dashed flex flex-col h-32 items-center justify-center relative w-full rounded-lg dark:bg-gray-800 dark:border-gray-600">
@@ -56,7 +65,7 @@
                             <path d="M9 13h2v5a1 1 0 11-2 0v-5z" />
                         </svg>
                     </div>
-                    <input type="file" name="file[]" multiple >
+                    <input type="file" name="file[]" required multiple >
                     <a 
               class="bg-gray-200 flex font-medium h-9 items-center justify-center px-5 rounded-b-xl text-blue-600 text-white uk-position-bottom uk-transition-bottom-small">
               Choose file</a><br><br>
@@ -69,3 +78,16 @@
         
 
      </div>
+     <script>
+        // Check for the success message and display a SweetAlert if present
+        document.addEventListener('DOMContentLoaded', function () {
+            @if(session('success'))
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: '{{ session('success') }}',
+                });
+            @endif
+        });
+    </script>
+    
