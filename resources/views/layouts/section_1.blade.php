@@ -26,7 +26,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
-                                    ${{ $unitFiles->first()->size }} {{-- Assuming you want to display the file size as price --}}
+                                    ${{ count($unitFiles)}} {{-- total number of pdfs --}}
                                 </div>
                                 <div class="text-xs font-semibold uppercase text-red-500">{{ $unitCode }}</div>
                                 {{-- <div class="ext-lg font-medium mt-1 t truncate">{{ $unitFiles->first()->name }}</div> --}}
