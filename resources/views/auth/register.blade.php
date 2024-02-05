@@ -19,8 +19,12 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
+           
+
+           
+
             <div class="mt-4">
-                <x-label for="course_id" value="{{ __('Course id') }}" />
+                <x-label for="course_id" value="{{ __('Course id : the first letters of adm no and last numbers i.e inf/22' ) }}" />
                 <x-input id="course_id" class="block mt-1 w-full" type="text" name="course_id" :value="old('course_id')" required autocomplete="course_id" />
             </div>
 

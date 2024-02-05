@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link href="assets/images/favicon.png" rel="icon" type="image/png">
+    <link href="/assets/images/log.png" rel="icon" type="image/png">
    
     <!-- Basic Page Needs
         ================================================== -->

@@ -11,7 +11,7 @@
         @include('layouts.header')
 
         <!-- sidebar -->
-        @INCLUDE('layouts.sidebar')
+        @include('layouts.sidebar')
 
         <!-- Main Contents -->
         <div class="main_content">
@@ -21,7 +21,7 @@
                     <div class="flex justify-between lg:border-t border-gray-100 flex-col-reverse lg:flex-row pt-2">
                         
                         <nav class="responsive-nav pl--3">
-                            <h2 class="text-xl font-semibold uppercase text-100" style="color: #2a41e8;">Welcome {{ Auth::user()->name }} &#128513;</h2>
+                            <h2 class="text-xl font-semibold uppercase text-100" style="color: #2a41e8;">{{ Auth::user()->name }} &#129513;</h2>
                             <ul  uk-switcher="connect: #timeline-tab; animation: uk-animation-fade">
                                
                                 <li><a href="#">Semester One </a></li>
@@ -33,8 +33,7 @@
                     </div>
 
                 </div>
-                    <!-- Sidebar -->
-                       @include('layouts.sidebar')
+                    
 
                         <!-- First semester  -->
                        <div class="uk-switcher lg:mt-8 mt-4" id="timeline-tab">
@@ -49,21 +48,17 @@
         
                         <!-- section list -->
         
-                       @include('layouts.section_1')
+                       @include('layouts.firstyear1')
                               
-                        @include('layouts.section_2')
-                        @include('layouts.section_3')
-                        @include('layouts.section_4')
+                        @include('layouts.secondyear1')
+                        @include('layouts.thirdyear1')
+                        @include('layouts.fourthyear1')
         
 
                     </div>
 
                     <!-- Second Semester -->
                     <div class="card md:p-6 p-2 max-w-6xl mx-auto">
-
-                        <h2 class="text-xl font-bold"> Second Semester</h2>
- 
-                       
                         <div class="flex justify-between relative md:mb-4 mb-3">
                             <div class="flex-1">
                                 
@@ -74,12 +69,12 @@
         
                         <!-- Section List -->
         
-                       @include('layouts.section_1')
+                       @include('layouts.firstyear2')
                      
         
-                        @include('layouts.section_2')
-                        @include('layouts.section_3')
-                        @include('layouts.section_4')
+                        @include('layouts.secondyear2')
+                        @include('layouts.thirdyear2')
+                        @include('layouts.fourthyear2')
         
 
                     </div>

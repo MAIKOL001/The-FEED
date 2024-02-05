@@ -11,18 +11,8 @@ class UploadController extends Controller
         return view('upload');
     }
 
-    public function home()
-    {
-    $files = File::all();
-    $uniqueUnitCodes = $files->unique('unit_code')->pluck('unit_code');
-    
-    // Fetch only the first file for each unique unit_code
-    $filteredFiles = $files->filter(function ($file) use ($uniqueUnitCodes) {
-        return in_array($file->unit_code, $uniqueUnitCodes->all());
-    });
+   
 
-    return view('dashboard')->with('files', $filteredFiles);
-    }
 
     public function store(Request $request)
     {

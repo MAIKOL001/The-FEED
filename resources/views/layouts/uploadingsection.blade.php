@@ -31,6 +31,17 @@
                     
             </div>
 
+            <div class="col-span-2">
+                <label for="Year">Year</label>
+                <select name="year" id="year" readonly style="border: 1px solid #ccc; padding: 8px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br><br>    
+            </div>
+
+
             <div>
                 <label for="semester">Semester:</label>
                 <select name="semester" id="semester" readonly style="border: 1px solid #ccc; padding: 8px;">
@@ -48,14 +59,11 @@
             </div>
 
             <div class="col-span-2">
-                <label for="unit_code">Unit Code</label>
-                <input type="text" name="unit_code" placeholder="Unit Code"  required style="border: 1px solid #ccc; padding: 8px;"><br><br>                      
+                <label for="unit_title">Unit Code</label>
+                <input type="text" name="unit_code" placeholder="Unit Title"  required style="border: 1px solid #ccc; padding: 8px;"><br><br>                      
             </div>
 
-            <div class="col-span-2">
-                <label for="Year">Year</label>
-                <input type="text" name="year" placeholder="Year"  required style="border: 1px solid #ccc; padding: 8px;"><br><br>                      
-            </div>
+            
 
              <div class="col-span-2">
                 <div uk-form-custom class="w-full py-3">
