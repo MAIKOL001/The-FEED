@@ -24,22 +24,24 @@ Route::middleware([
 ])->group(function () {
     
     Route::get('/dashboard',[App\Http\Controllers\DashboardController::class, 'home'])->name('dashboard');
+ 
     Route::post('/store',[App\Http\Controllers\UploadController::class, 'store'])->name('upload.file');
     
 Route::get('/upload',[App\Http\Controllers\UploadController::class, 'index']);
 
-Route::get('/1styear',[App\Http\Controllers\CoursesController::class, 'index']);
 
 Route::get('/2ndyear',[App\Http\Controllers\CoursesController::class, 'second']);
 
-Route::get('/3rdyear',[App\Http\Controllers\CoursesController::class, 'third']);
-
-Route::get('/4thyear',[App\Http\Controllers\CoursesController::class, 'fourth']);  
+  
 
 Route::get('/account',[App\Http\Controllers\AccountController::class,'index']);
+
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
+
+Route::get('/2ndyear', [App\Http\Controllers\DashboardController::class,'showPdfs'])->name('unit.pdfs');
+
+Route::get('/download/{id}', [App\Http\Controllers\FileController::class, 'download'])->name('file.download');
 });
-
-
 
 
 

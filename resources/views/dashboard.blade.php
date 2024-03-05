@@ -15,7 +15,7 @@
 
         <!-- Main Contents -->
         <div class="main_content">
-            <div class="mcontainer">
+            <div class="mcontainer" >
 
                 
                     <div class="flex justify-between lg:border-t border-gray-100 flex-col-reverse lg:flex-row pt-2">

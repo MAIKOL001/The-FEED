@@ -17,23 +17,7 @@
             <div class="mcontainer">
 
 
-                <div class="flex justify-between relative md:mb-4 mb-3">
-                    <div class="flex-1">
-                        <h2 class="text-2xl font-semibold"> Videos </h2>
-                        <nav class="responsive-nav border-b md:m-0 -mx-4">
-                            <ul>
-                                <li class="active"><a href="#" class="lg:px-2">   All<span>24</span> </a></li>
-                               
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                </div>
-
-                <!-- Video list -->
-
-               @include('layouts.videolist
-               ')
+                
 
                 <!--  pdf  list -->
 

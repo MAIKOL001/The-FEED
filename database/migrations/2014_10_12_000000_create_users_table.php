@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('course_id');
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->string('course_id')->nullable();
-           
             $table->timestamps();
         });
     }
@@ -31,6 +31,11 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('is_admin');
+        });
+
         Schema::dropIfExists('users');
     }
 };
+

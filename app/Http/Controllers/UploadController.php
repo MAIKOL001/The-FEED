@@ -38,7 +38,9 @@ class UploadController extends Controller
                 $fileModel->category = $request->category;
                 $fileModel->year = $request->year;
                 $fileModel->unit_code = $request->unit_code;
+                $fileModel->unit_name = $request->unit_name;
                 $fileModel->course_id = $request->course_id;
+                
                 $fileModel->save();
             }
     

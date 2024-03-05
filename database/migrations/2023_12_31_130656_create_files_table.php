@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('year');
             $table->string('unit_code');
+            $table->string('unit_name');
             $table->timestamps();
         });
     }

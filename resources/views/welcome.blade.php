@@ -28,8 +28,8 @@
                         </a>
     
                         <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
-                            <a href="form-login.html" class="py-3 px-4">Login</a>
-                            <a href="form-register.html" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
+                            <a href="/login" class="py-3 px-4">Login</a>
+                            <a href="/register" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
                         </div>
     
                     </div>

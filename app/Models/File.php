@@ -17,10 +17,12 @@ class File extends Model
             $table->string('size');
             $table->string('location');
             $table->string('course_id');
+            $table->string('user_id');
             $table->integer('semester')->nullable(); // Add this line to include the semester
             $table->string('category');
             $table->string('year');
             $table->string('unit_code');
+            $table->string('unit_name');
             $table->timestamps();
         });
     }

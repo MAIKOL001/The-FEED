@@ -19,16 +19,10 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
-           
-
-           
-
             <div class="mt-4">
-                <x-label for="course_id" value="{{ __('Course id : the first letters of adm no and last numbers i.e inf/22' ) }}" />
-                <x-input id="course_id" class="block mt-1 w-full" type="text" name="course_id" :value="old('course_id')" required autocomplete="course_id" />
+                <x-label for="course_id" value="{{ __('Course Id') }}" />
+                <x-input id="course_id" class="block mt-1 w-full" type="course_id" name="course_id" required autocomplete="course_id" />
             </div>
-
-            
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
@@ -46,7 +40,7 @@
                         <div class="flex items-center">
                             <x-checkbox name="terms" id="terms" required />
 
-                            <div class="ms-2">
+                            <div class="ml-2">
                                 {!! __('I agree to the :terms_of_service and :privacy_policy', [
                                         'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
                                         'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
@@ -62,7 +56,7 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ms-4">
+                <x-button class="ml-4">
                     {{ __('Register') }}
                 </x-button>
             </div>
