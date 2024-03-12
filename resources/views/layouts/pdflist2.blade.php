@@ -26,12 +26,19 @@
                 <div class="flex items-center justify-between">
                     <a href="{{ asset($file->location) }}" class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1 "download><i class="icon-feather-download"> </i></a>
                 <div> . </div> 
-                @if (Auth::user()->is_admin == 1)
-                <button class="bg-red-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1"><i class="icon-feather-trash"> </i></button>
-                <div> . </div> 
                 <a href="{{ asset($file->location) }}" target="_blank" class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                     <i class="icon-feather-eye"> </i>
                 </a>
+                <div> . </div> 
+                @if (Auth::user()->is_admin == 1)
+                <form action="{{ route('files.destroy', $file->id) }}" method="POST" id="deleteForm">
+                    @csrf
+                    @method('DELETE')
+                    <button type="button" onclick="confirmDelete()" class="bg-red-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                        <i class="icon-feather-trash"></i>
+                    </button>
+                </form>
+                
                 <a href="/upload" class="is_icon" uk-tooltip="title: Upload">
                   </a>
               @endif
@@ -42,4 +49,11 @@
     </div>
 
 </div>
+<script>
+    function confirmDelete() {
+        if (confirm('Are you sure you want to delete this file?')) {
+            document.getElementById('deleteForm').submit();
+        }
+    }
+</script>
 

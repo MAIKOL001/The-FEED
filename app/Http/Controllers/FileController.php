@@ -75,5 +75,20 @@ public function uploaded($courseId)
     dd($files);
 }
 
+public function destroy($id)
+{
+    $file = File::findOrFail($id);
+    
+    // Delete the file from the server if it exists
+    if (Storage::disk('public')->exists($file->location)) {
+        Storage::disk('public')->delete($file->location);
+    }
+
+    // Delete the file from the database
+    $file->delete();
+
+    return redirect()->back()->with('success', 'File deleted successfully.');
+}
+
 
 }

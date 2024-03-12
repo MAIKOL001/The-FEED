@@ -41,6 +41,8 @@ Route::get('/results', [App\Http\Controllers\FileController::class, 'index'])->n
 
 Route::get('/show/{unitCode}', [App\Http\Controllers\FileController::class,'show'])->name('show');
 
+Route::delete('/files/{file}', [App\Http\Controllers\FileController::class,'destroy'])->name('files.destroy');
+
 });
 
 
