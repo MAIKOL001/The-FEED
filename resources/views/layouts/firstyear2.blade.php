@@ -1,6 +1,6 @@
 
 <div class="flex-1">
-    <h2 class="text-xl font-semibold"> 2ND YEAR </h2>
+    <h2 class="text-xl font-semibold"> 1ST YEAR </h2>
 
 </div>
 

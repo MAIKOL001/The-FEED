@@ -29,18 +29,18 @@ Route::middleware([
     
 Route::get('/upload',[App\Http\Controllers\UploadController::class, 'index']);
 
-
-Route::get('/2ndyear',[App\Http\Controllers\CoursesController::class, 'second']);
-
-  
-
 Route::get('/account',[App\Http\Controllers\AccountController::class,'index']);
-
-Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
 
 Route::get('/2ndyear', [App\Http\Controllers\DashboardController::class,'showPdfs'])->name('unit.pdfs');
 
 Route::get('/download/{id}', [App\Http\Controllers\FileController::class, 'download'])->name('file.download');
+
+Route::get('/search', [App\Http\Controllers\FileController::class, 'search'])->name('search');
+
+Route::get('/results', [App\Http\Controllers\FileController::class, 'index'])->name('searchresults');
+
+Route::get('/show/{unitCode}', [App\Http\Controllers\FileController::class,'show'])->name('show');
+
 });
 
 

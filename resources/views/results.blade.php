@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-@include('layouts.metatags')
-
-
-</head> 
+@include('layouts.metatags') 
 <body>
    
     
-
+    
 
     <div id="wrapper">
 
@@ -18,17 +15,32 @@
 
         <!-- Main Contents -->
         <div class="main_content">
-            <div class="mcontainer">
+            <div class="mcontainer" >
 
-             @include('layouts.uploadingsection')
-    
+                
+                    <h4 class="search_title">Search Results</h4>
+                    <ul>
+                        
+                        @isset($results)
+    <ul>
+        @foreach($results as $result)
+            <li>
+                <a href="{{ route('show', ['unitCode' => $result->unit_code]) }}">
+                    Unit Name: {{ $result->unit_name }}, Unit code: {{ $result->unit_code }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+@endisset
+@empty($results)
+    <p>No results found.</p>
+@endempty
+
+              
+            </div>
+                    </div>
                    
-
-
-
-    
-             <text style="font:1rem;">Not Allowed</text>
-    
+        
     <!-- For Night mode -->
     <script>
         (function (window, document, undefined) {
@@ -67,13 +79,9 @@
   
     <!-- Javascript
     ================================================== -->
-      <script src="assets/js/tippy.all.min.js"></script>
-    <script src="assets/js/uikit.js"></script>
-    <script src="assets/js/simplebar.js"></script>
-  
-  
+     @include('layouts.scripts')
+ 
 
 </body>
 
-<!-- Mirrored from demo.foxthemes.net/socialite/pages-setting.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 17:42:45 GMT -->
 </html>

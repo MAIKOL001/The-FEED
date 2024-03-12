@@ -67,7 +67,7 @@
                     @include('layouts.about')
 
                     <!--coursemates-->
-                        @include('layouts.coursemates')
+                        @include('layouts.album')
                       
                             </div>
                         </div>

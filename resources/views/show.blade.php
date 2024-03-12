@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-@include('layouts.metatags')
-
-
-</head> 
+@include('layouts.metatags') 
 <body>
    
     
-
+    
 
     <div id="wrapper">
 
@@ -18,17 +15,36 @@
 
         <!-- Main Contents -->
         <div class="main_content">
-            <div class="mcontainer">
+            <div class="mcontainer" >
 
-             @include('layouts.uploadingsection')
-    
+                
+                    <div class="flex justify-between lg:border-t border-gray-100 flex-col-reverse lg:flex-row pt-2">
+                        
+                        <nav class="responsive-nav pl--3">
+                            <h2 class="text-xl font-semibold uppercase text-100" style="color: #0b0b0c;">Results &#129513;</h2>
+                            
+                        </nav>
+ 
+                    </div>
+
+                </div>
+                    
+
+                        <!-- First semester  -->
+                       
+        
+                        <!-- section list -->
+        
+                       @include('layouts.show')
+                              
+                        
+
+                    </div>
+
+    </div>
+</body>
                    
-
-
-
-    
-             <text style="font:1rem;">Not Allowed</text>
-    
+        
     <!-- For Night mode -->
     <script>
         (function (window, document, undefined) {
@@ -67,13 +83,9 @@
   
     <!-- Javascript
     ================================================== -->
-      <script src="assets/js/tippy.all.min.js"></script>
-    <script src="assets/js/uikit.js"></script>
-    <script src="assets/js/simplebar.js"></script>
-  
-  
+     @include('layouts.scripts')
+ 
 
 </body>
 
-<!-- Mirrored from demo.foxthemes.net/socialite/pages-setting.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 17:42:45 GMT -->
 </html>

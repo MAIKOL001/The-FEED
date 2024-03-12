@@ -16,12 +16,13 @@
 
     <!-- icons
     ================================================== -->
-    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="/assets/css/icons.css">
 
     <!-- CSS 
     ================================================== --> 
-    <link rel="stylesheet" href="assets/css/uikit.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-     <link href="assets/css/tailwind.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="/assets/css/uikit.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <link href="/assets/css/tailwind.css" rel="stylesheet"> 
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     
 </head> 

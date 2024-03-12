@@ -50,4 +50,15 @@ class UploadController extends Controller
             return redirect('/upload')->with('error', 'Error uploading files: ' . $e->getMessage());
         }
     }
+
+   
+
+public function unitcode()
+{
+    // Fetch unique unit codes from the files table
+    $unitCodes = File::distinct()->pluck('unit_code');
+
+    return view('upload', ['unitCodes' => $unitCodes]);
+}
+
 }

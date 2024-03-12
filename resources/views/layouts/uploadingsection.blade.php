@@ -1,3 +1,4 @@
+@if (Auth::user()->is_admin == 1)
 <div class="mb-6">
     <h2 class="text-2xl font-semibold"> Upload </h2>
     <nav class="responsive-nav border-b md:m-0 -mx-4">
@@ -13,11 +14,13 @@
         <h3 class="text-xl mb-2 font-semibold"> Guide</h3>
         <p>1.Fill in the spaces to upload the files </p>
         <p>2.The course id will be auto completed </p>
-        <p>3.On the category section Choose where the file you are uploading if they are Pdfs or videos </p>
+        <p>3.Unit Code (eg. inf320) in smallletters & no spaces</p>
+        <p>3.Unit Name (eg. data structures) in smallletters</p>
     </div>
     <div class="bg-white rounded-md lg:shadow-md shadow col-span-2 lg:mx-16">
 
         <div class="grid grid-cols-1 gap-3 lg:p-6 p-4">
+            
             <form method="POST" action="{{ route('upload.file') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 @if(session('success'))
@@ -57,6 +60,17 @@
                     <option value="2">Videos</option>
                 </select><br><br>     
             </div>
+
+            {{-- <div class="col-span-2">
+                <label for="unit_code">Unit Code</label>
+                <select name="unit_code" id="unit_code" readonly required style="border: 1px solid #ccc; padding: 8px;">
+                    <option value="">Select Unit Code</option>
+                    @foreach($unitCodes as $unitCode)
+                        <option value="{{ $unitCode }}">{{ $unitCode }}</option>
+                    @endforeach
+                </select><br><br>     
+            </div>
+             --}}
 
             <div class="col-span-2">
                 <label for="unit_code">Unit Code</label>
@@ -103,4 +117,4 @@
             @endif
         });
     </script>
-    
+    @endif

@@ -4,15 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\File;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 class DashboardController extends Controller
 {
     //
    
     public function home()
     {
-        // Fetch all files
-        $files = File::get();
+
+        if ($user = Auth::user()) {
         
+            // Get the authenticated user's course ID
+            $userCourseId = $user->course_id;
+    
+            // Fetch PDFs based on the user's course ID
+          
+     
+        $files = File::where('course_id', $userCourseId)->get();
+        }
         // Extract unique unit codes
         $uniqueUnitCodes = $files->unique('unit_code')->pluck('unit_code');
         
@@ -38,6 +48,7 @@ class DashboardController extends Controller
     // Retrieve the unit code and ID from the query parameters
     $unitCode = $request->input('unit_code');
     $unitId = $request->input('unit_id');
+    
 
     // Retrieve the PDFs associated with the selected unit code and ID
     $files = File::where('unit_code', $unitCode)
