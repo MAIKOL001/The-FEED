@@ -28,11 +28,13 @@ class FileController extends Controller
     return response()->download($filePath, explode('_', $file->name, 2)[1]);
 
 }
+
 public function search(Request $request)
 {
     // Get the authenticated user's course ID
     $courseId = Auth::user()->course_id;
-
+    
+ 
     // Retrieve the search query from the request
     $query = $request->input('query');
 
@@ -72,11 +74,12 @@ public function uploaded($courseId)
     $files = File::where('course_id', $courseId)->get();
 
     return view('account', ['files' => $files]);
-    dd($files);
+    
 }
 
 public function destroy($id)
 {
+    
     $file = File::findOrFail($id);
     
     // Delete the file from the server if it exists

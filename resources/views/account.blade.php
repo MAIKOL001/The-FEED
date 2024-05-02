@@ -5,8 +5,24 @@
 <head>
     @include('layouts.metatags')
 
-</head> 
-<body>
+    <link rel="stylesheet" type="text/css" href="/vendors/styles/style.css" />
+   
+</head>
+    <body>
+       
+        <div class="pre-loader">
+            <div class="pre-loader-box">
+                <div class="loader-logo">
+                    <img src="/assets/images/log.png" alt="" style="height: 6rem; width:6rem;">
+                </div>
+                <div class="loader-progress" id="progress_div">
+                    <div class="bar" id="bar1"></div>
+                </div>
+                <div class="percent" id="percent1">0%</div>
+                <div class="loading-text">Loading...</div>
+            </div>
+        </div>
+        
    
     
 
@@ -126,16 +142,13 @@
     
         })(window, document);
     </script>
+    <script src="/vendors/scripts/core.js"></script>
+    <script src="/vendors/scripts/script.min.js"></script>
+    <script src="/vendors/scripts/process.js"></script>
   
     <!-- Javascript
     ================================================== -->
-     <script src="../../code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="assets/js/tippy.all.min.js"></script>
-    <script src="assets/js/uikit.js"></script>
-    <script src="assets/js/simplebar.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="../../unpkg.com/ionicons%405.2.3/dist/ionicons.js"></script>
+    @include('layouts.scripts')
 
 </body>
 

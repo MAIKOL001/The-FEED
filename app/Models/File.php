@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+
+use App\Providers\RouteServiceProvider;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Migrations\Migration;
@@ -20,6 +22,8 @@ use Illuminate\Support\Facades\Schema;
         'semester',
         'category',
         'year',
+        'due_date',
+        'cat_name',
         'unit_code',
         'unit_name',
     ];

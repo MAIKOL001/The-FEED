@@ -10,6 +10,11 @@ class DashboardController extends Controller
 {
     //
    
+    public function index()
+    {
+        return View('dashboard');
+    }
+
     public function home()
     {
 
@@ -38,25 +43,25 @@ class DashboardController extends Controller
     }
     
 
-    public function index()
-    {
-        return View('dashboard');
-    }
+    
 
     public function showPdfs(Request $request)
 {
     // Retrieve the unit code and ID from the query parameters
     $unitCode = $request->input('unit_code');
     $unitId = $request->input('unit_id');
+    $unitName=$request->input('unit_name');
+
+    
     
 
     // Retrieve the PDFs associated with the selected unit code and ID
     $files = File::where('unit_code', $unitCode)
-            //    ->where('unit_name', $unitId)
                ->get();
-
+              
     // Pass the PDFs data to the Blade view
     return view('2ndyear', compact('files'));
 }
+
 
 }

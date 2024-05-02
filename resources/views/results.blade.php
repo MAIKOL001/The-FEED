@@ -15,20 +15,31 @@
 
         <!-- Main Contents -->
         <div class="main_content">
-            <div class="mcontainer" >
+            <div class="mcontainer py-3" >
 
                 
                     <h4 class="search_title">Search Results</h4>
                     <ul>
                         
                         @isset($results)
-    <ul>
+    
         @foreach($results as $result)
-            <li>
+
+        <div class="card">
+           
                 <a href="{{ route('show', ['unitCode' => $result->unit_code]) }}">
-                    Unit Name: {{ $result->unit_name }}, Unit code: {{ $result->unit_code }}
-                </a>
-            </li>
+                
+              
+            <div class="card-body py-3">
+                
+                <div class="text-xs font-semibold uppercase text-red-500">Unit Name: {{ $result->unit_name }}</div>
+                
+                <div class="ext-lg font-medium mt-1 t truncate"> Unit code: {{ $result->unit_code }}</div>
+                
+            </div>
+        </div>
+        <br>
+    </a>
         @endforeach
     </ul>
 @endisset

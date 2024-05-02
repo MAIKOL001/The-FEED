@@ -19,6 +19,8 @@ return new class extends Migration
             $table->integer('semester')->nullable(); // Add this line to include the semester
             $table->string('category');
             $table->string('year');
+            $table->string('cat_name')->nullable();
+            $table->string('due_date')->nullable();
             $table->string('unit_code');
             $table->string('unit_name');
             $table->timestamps();

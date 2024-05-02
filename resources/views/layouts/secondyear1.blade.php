@@ -18,19 +18,18 @@
                         <div class="card">
                             <div class="card-media h-40">
                                 <div class="card-media-overly"></div>
+                                <a href="{{ route('unit.pdfs', ['unit_code' => $unitCode,]) }}">
                                 <img src="{{ asset('/assets/images/courses/1.jpeg') }}" alt="">
                                 <span class="absolute bg-white px-2 py-1 text-sm rounded-md m-2"> Label</span>
-                                <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                    <i class="icon-feather-heart"> </i>
-                                </button>
+                               
                             </div>
                             <div class="card-body">
                                 <div class="-top-3 absolute bg-blue-100 font-medium px-2 py-1 right-2 rounded-full text text-blue-500 text-sm">
                                     {{ count($unitFiles) }}pdfs 
                                 </div>
                                 <div class="text-xs font-semibold uppercase text-red-500">{{ $unitCode }}</div>
-                                <a href="{{ route('unit.pdfs', ['unit_code' => $unitCode,]) }}">
-                                <div class="ext-lg font-medium mt-1 t truncate">{{ $unitNames[$unitCode] }}</div>
+                                
+                                <div class="ext-lg font-medium mt-1 uppercase t truncate">{{ $unitNames[$unitCode] }}</div>
                                 {{-- {{ $unitFiles->first()->name }} --}}
                             </div>
                         </div>

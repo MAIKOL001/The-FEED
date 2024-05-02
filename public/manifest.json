@@ -1,0 +1,17 @@
+{
+    "name": "The Feed",
+    "short_name": "Feed",
+    "start_url": "/index.php",
+    "background_color": "#00000",
+    "description": "classroom",
+    "display": "fullscreen",
+    "theme_color": "#00000",
+    "icons": [
+        {
+            "src": "log.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

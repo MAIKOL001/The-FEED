@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 @include('layouts.metatags') 
+
+
 <body>
+   
+  
+    
    
     
     
@@ -80,7 +85,7 @@
     
         })(window, document);
     </script>
-  
+
     <!-- Javascript
     ================================================== -->
      @include('layouts.scripts')
