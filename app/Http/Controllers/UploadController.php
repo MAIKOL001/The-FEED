@@ -34,7 +34,7 @@ class UploadController extends Controller
     
             // Validate the files and additional fields
             $this->validate($request, [
-                'file.*' => 'file|max:9045240|mimes:pptx,doc,docx,pdf', // Maximum file size is 10 MB and allowed formats are pptx, doc, docx, and pdf
+                'file.*' => 'file|max:9045240|mimes:pptx,doc,docx,pdf,mp4', // Maximum file size is 10 MB and allowed formats are pptx, doc, docx, and pdf
                 'cat_name' => ($request->category === 'cat') ? 'required|string|max:255' : 'nullable', // Required if category is "cat"
                 'due_date' => ($request->category === 'cat') ? 'required|date' : 'nullable', // Required if category is "cat"
             ], $messages);

@@ -68,14 +68,7 @@ public function show($unitCode)
     return view('show', ['files' => $file]);
 }
 
-public function uploaded($courseId)
-{
-    // Retrieve PDFs based on the course ID
-    $files = File::where('course_id', $courseId)->get();
 
-    return view('account', ['files' => $files]);
-    
-}
 
 public function destroy($id)
 {

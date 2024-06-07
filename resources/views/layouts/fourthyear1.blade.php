@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="text-xs font-semibold uppercase text-red-500">{{ $unitCode }}</div>
                                 
-                                <div class="ext-lg font-medium mt-1 uppercase t truncate">{{ $unitNames[$unitCode] }}</div>
+                                <div class="ext-lg font-semibold mt-1 uppercase t truncate">{{ $unitNames[$unitCode] }}</div>
                                 {{-- {{ $unitFiles->first()->name }} --}}
                             </div>
                         </div>

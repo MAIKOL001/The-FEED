@@ -9,10 +9,22 @@
         }
     </style>
 </head> 
-<body>
+
 
     <body class="bg-gray-100">
-
+        {{-- <div class="pre-loader">
+            <div class="pre-loader-box">
+                <div class="loader-logo">
+                    <img src="/assets/images/log.png" alt="" style="height: 6rem; width:6rem;">
+                </div>
+                <div class="loader-progress" id="progress_div">
+                    <div class="bar" id="bar1"></div>
+                </div>
+                <div class="percent" id="percent1">0%</div>
+                <div class="loading-text">Loading...</div>
+            </div>
+        </div>
+         --}}
 
         <div id="wrapper" class="flex flex-col justify-between h-screen">
     
@@ -23,13 +35,13 @@
     
                     <div class="flex items-center lg:justify-between justify-around">
     
-                        <a href="trending.html">
-                           <strong>The Feed </strong>
+                        <a href="/login">
+                            <img src="assets/images/logo.png" alt="" class="w-32">
                         </a>
     
                         <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
                             <a href="/login" class="py-3 px-4">Login</a>
-                            <a href="/register" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
+                            <a href="/register" class="py-3 px-4">Register</a>
                         </div>
     
                     </div>
@@ -42,7 +54,7 @@
                     
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                    <h1 class="lg:text-2xl text-xl font-semibold mb-6"> Login </h1>
+                    <h1 class="lg:text-2xl text-xl font-semibold mb-6" style="color: blue;"> Login </h1>
 
                         <div>
                             <x-label for="email" value="{{ __('Email') }}" />
@@ -53,14 +65,14 @@
                             <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />    
                         </div>
                         
-                        <div>
-                            <button class="button">
-                                {{ __('Log in') }}
-                            <button>
-                            </div>
-
-                        <div>
-                           <a href="/register" style="color:blue; ">register</a>
+                        <div class="flex items-center justify-end mt-4">
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                                {{ __('Register?') }}
+                            </a>
+            
+                            <x-button class="ml-4 bg-blue">
+                                {{ __('Log In') }}
+                            </x-button>
                         </div>
         
                     </form>
@@ -87,44 +99,28 @@
 
         
    
-    <!-- For Night mode -->
-    <script>
-        (function (window, document, undefined) {
-            'use strict';
-            if (!('localStorage' in window)) return;
-            var nightMode = localStorage.getItem('gmtNightMode');
-            if (nightMode) {
-                document.documentElement.className += ' night-mode';
-            }
-        })(window, document);
     
-        (function (window, document, undefined) {
-    
-            'use strict';
-    
-            // Feature test
-            if (!('localStorage' in window)) return;
-    
-            // Get our newly insert toggle
-            var nightMode = document.querySelector('#night-mode');
-            if (!nightMode) return;
-    
-            // When clicked, toggle night mode on or off
-            nightMode.addEventListener('click', function (event) {
-                event.preventDefault();
-                document.documentElement.classList.toggle('dark');
-                if (document.documentElement.classList.contains('dark')) {
-                    localStorage.setItem('gmtNightMode', true);
-                    return;
-                }
-                localStorage.removeItem('gmtNightMode');
-            }, false);
-    
-        })(window, document);
-    </script>
+   
   
     <!-- Javascript
     ================================================== -->
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+       if ("serviceWorker" in navigator) {
+          // Register a service worker hosted at the root of the
+          // site using the default scope.
+          navigator.serviceWorker.register("/sw.js").then(
+          (registration) => {
+             console.log("Service worker registration succeeded:", registration);
+          },
+          (error) => {
+             console.error(`Service worker registration failed: ${error}`);
+          },
+        );
+      } else {
+         console.error("Service workers are not supported.");
+      }
+    </script>
     @include('layouts.scripts')
     
 </body>

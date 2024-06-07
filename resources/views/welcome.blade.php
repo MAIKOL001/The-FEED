@@ -8,27 +8,23 @@
             box-shadow: none  !important; 
         }
     </style>
-<link rel="stylesheet" type="text/css" href="/vendors/styles/style.css" />
+</head> 
 
-        
-<body>
-   
-    <div class="pre-loader">
-        <div class="pre-loader-box">
-            <div class="loader-logo">
-                <img src="/assets/images/log.png" alt="" style="height: 6rem; width:6rem;">
-            </div>
-            <div class="loader-progress" id="progress_div">
-                <div class="bar" id="bar1"></div>
-            </div>
-            <div class="percent" id="percent1">0%</div>
-            <div class="loading-text">Loading...</div>
-        </div>
-    </div>
-    
 
     <body class="bg-gray-100">
-
+        {{-- <div class="pre-loader">
+            <div class="pre-loader-box">
+                <div class="loader-logo">
+                    <img src="/assets/images/log.png" alt="" style="height: 6rem; width:6rem;">
+                </div>
+                <div class="loader-progress" id="progress_div">
+                    <div class="bar" id="bar1"></div>
+                </div>
+                <div class="percent" id="percent1">0%</div>
+                <div class="loading-text">Loading...</div>
+            </div>
+        </div> --}}
+        
 
         <div id="wrapper" class="flex flex-col justify-between h-screen">
     
@@ -39,13 +35,13 @@
     
                     <div class="flex items-center lg:justify-between justify-around">
     
-                        <a href="trending.html">
-                           <strong>The Feed </strong>
+                        <a href="/login">
+                            <img src="assets/images/logo.png" alt="" class="w-32">
                         </a>
     
                         <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
                             <a href="/login" class="py-3 px-4">Login</a>
-                            <a href="/register" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
+                            <a href="/register" class="py-3 px-4">Register</a>
                         </div>
     
                     </div>
@@ -69,18 +65,14 @@
                             <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />    
                         </div>
                         
-                        <div>
-                            <button class="button">
-                                {{ __('Log in') }}
-                            <button>
-                            </div>
-
-                        <div>
-                            
+                        <div class="flex items-center justify-end mt-4">
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                                {{ __('register') }}
+                                {{ __('Register?') }}
                             </a>
-                        
+            
+                            <x-button class="ml-4 bg-blue">
+                                {{ __('Log In') }}
+                            </x-button>
                         </div>
         
                     </form>
@@ -107,7 +99,11 @@
 
         
    
-    <!-- For Night mode -->
+    
+   
+  
+    <!-- Javascript
+    ================================================== -->
     <script src="{{ asset('/sw.js') }}"></script>
     <script>
        if ("serviceWorker" in navigator) {
@@ -125,14 +121,8 @@
          console.error("Service workers are not supported.");
       }
     </script>
-    <script src="/vendors/scripts/core.js"></script>
-    <script src="/vendors/scripts/script.min.js"></script>
-    <script src="/vendors/scripts/process.js"></script>
-  
-    <!-- Javascript
-    ================================================== -->
     @include('layouts.scripts')
-   
+    
 </body>
 
 </html>

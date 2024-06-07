@@ -30,6 +30,17 @@
 </head>
 
 <body>
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+          config: {
+            bot_id: '7368849374774460421',
+          },
+          componentProps: {
+            title: 'The feed',
+          },
+        });
+    </script>
     <div class="container chat-container">
         <div class="chat-box border">
             <!-- Sample messages -->

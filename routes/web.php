@@ -47,7 +47,7 @@ Route::delete('/files/{file}', [App\Http\Controllers\FileController::class,'dest
 
 Route::get('/ai', [App\Http\Controllers\AiController::class,'View'])->name('view');
 
-
+Route::get('/ar', [App\Http\Controllers\ArController::class,'index'])->name('view');
 
 
 

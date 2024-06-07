@@ -49,7 +49,6 @@ class DashboardController extends Controller
 {
     // Retrieve the unit code and ID from the query parameters
     $unitCode = $request->input('unit_code');
-    $unitId = $request->input('unit_id');
     $unitName=$request->input('unit_name');
 
     

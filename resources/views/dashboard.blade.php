@@ -6,8 +6,9 @@
 		<!-- Google Tag Manager -->
 		
 <body>
+   
     <div id="wrapper">
-
+      
         <!-- Header -->
         @include('layouts.header')
 
@@ -85,7 +86,17 @@
   
 
 
-
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+          config: {
+            bot_id: '7368849374774460421',
+          },
+          componentProps: {
+            title: 'Emilly',
+          },
+        });
+    </script>
 
 
   
